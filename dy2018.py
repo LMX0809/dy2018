@@ -6,18 +6,7 @@ from tkinter import *
 from tkinter import ttk
 import tkinter.scrolledtext
 import threading
-#print ("请输入爬取第____页")
-#p = input()
-#page = p
-#p = 1
-#try:
-#    if int(p) == 1:
 url = 'http://www.dy2018.com/html/gndy/dyzz/index.html'
-#    else:
-#        url = 'http://www.dy2018.com/html/gndy/dyzz/index_' + page + '.html'
-#    print(url)
-#except:
-#    print("是第几页！！只能输入数字！一般第1页为最新。还不会的请发点红包给我,帮你充值一波智商")
 moive_url_list = [] #定义电影名称列表
 def get_info():  # 定义爬取函数
     get_film = requests.get(url)#爬取网页
@@ -48,11 +37,6 @@ def son_info(): #定义获取最新网页中的子网页信息
 main = son_info()#调用函数
 
 def outp():#定义输出函数
-#    for i in main:
-#       print(i)
-#o = outp()
-#    var = main
-#    t.insert('insert',var)
     for var in main:
         t.insert('insert',var )
 root = Tk() #实例化变量名，方便调用
