@@ -35,7 +35,7 @@ def son_info(): #定义获取最新网页中的子网页信息
             son_soup = BeautifulSoup(son_moive_info,"html.parser")#转换为soup类
             son_fill_film = son_soup.find_all('a') #过滤出a标签并赋值
             for j in son_fill_film: #在sff中遍历
-                pa = re.compile(r'^ftp://.*.(mkv|rmvb)')#正则表达式匹配出下载链接
+                pa = re.compile(r'^ftp://.*.(mkv|rmvb|mp4)')#正则表达式匹配出下载链接
                 string = j['href']#当匹配到href就赋值
                 match = pa.match(string)#匹配字符串
                 if match:
